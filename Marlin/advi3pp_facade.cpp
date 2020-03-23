@@ -238,6 +238,39 @@ int ADVi3pp::back_probe_bed_position()
     return sensor_settings.back_probe_bed_position();
 }
 
+#else
+
+double ADVi3pp::x_probe_offset_from_extruder()
+{
+	return 0;
+}
+
+double ADVi3pp::y_probe_offset_from_extruder()
+{
+	return 0;
+}
+
+int ADVi3pp::left_probe_bed_position()
+{
+	return 0;
+}
+
+int ADVi3pp::right_probe_bed_position()
+{
+	return 0;
+}
+
+int ADVi3pp::front_probe_bed_position()
+{
+	return 0;
+}
+
+int ADVi3pp::back_probe_bed_position()
+{
+	return 0;
+}
+
+
 #endif
 
 // --------------------------------------------------------------------

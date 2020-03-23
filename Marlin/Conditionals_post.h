@@ -1005,10 +1005,12 @@
   #undef X_PROBE_OFFSET_FROM_EXTRUDER
   #undef Y_PROBE_OFFSET_FROM_EXTRUDER
   #undef Z_PROBE_OFFSET_FROM_EXTRUDER
-  //@advi3++: These are dynamic so do not use them
-  //#define X_PROBE_OFFSET_FROM_EXTRUDER 0
-  //#define Y_PROBE_OFFSET_FROM_EXTRUDER 0
-  //#define Z_PROBE_OFFSET_FROM_EXTRUDER 0
+  //@advi3++: These are dynamic so do not use them for BLTouch and similar
+  #ifndef ADVi3PP_PROBE
+    #define X_PROBE_OFFSET_FROM_EXTRUDER 0
+    #define Y_PROBE_OFFSET_FROM_EXTRUDER 0
+    #define Z_PROBE_OFFSET_FROM_EXTRUDER 0
+  #endif
 #endif
 
 /**

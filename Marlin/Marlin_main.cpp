@@ -4595,10 +4595,10 @@ void home_all_axes() { gcode_G28(true); }
       case MeshStart:
         mbl.reset();
         mbl_probe_index = 0;
-        if (!lcd_wait_for_move) {
+        /*if (!lcd_wait_for_move) {
           enqueue_and_echo_commands_P(PSTR("G28\nG29 S2"));
           return;
-        }
+        }*/
         state = MeshNext;
 
       case MeshNext:
