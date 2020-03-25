@@ -152,4 +152,5 @@ ArduinoCore
 .python-version
 Marlin/BLTouch-Debug
 Marlin/BLTouch-Release
+build/
 
